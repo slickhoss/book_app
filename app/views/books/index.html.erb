@@ -1,9 +1,11 @@
 <h1>Books View</h1>
 
 <% @books.each do |book|%>
-    <div class="container bg-info">
+    <div class="well">
         <h3> Title: <%= book.title %> </h3>
         <p> Author: <%= book.author %></p>
+        <p> Rating: <%= book.rating %></p>
         <p> Published by: <%= book.publisher %> </p>
+        <%= link_to 'Read More', book_path(book)%>
     </div> <br>
 <% end %>

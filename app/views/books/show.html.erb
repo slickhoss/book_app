@@ -1,2 +1,14 @@
 <h2> <%= @book.title %> </h2>
 <p> <%= @book.author %></p>
+<p> <%= @book.rating %> </p>
+<p> <%= @book.publisher %> </p>
+<hr>
+<%= link_to 'Edit' ,edit_book_path(@book), :class => 'btn btn-default' %>
+<%= link_to 'Delete' ,book_path(@book), 
+method: :delete,
+data: {confirm: 'Are you sure?'},:class => 'btn btn-danger' %>
+
+<hr>
+
+<%= render 'reviews/reviews'%>
+<%= render 'reviews/newReview'%>

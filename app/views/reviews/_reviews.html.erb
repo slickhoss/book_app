@@ -1,0 +1,11 @@
+
+<h3> Reviews </h3>
+<% @book.reviews.each do |review| %>
+    <div class="well">
+        <p><strong>  <%= review.score %> </strong>  <%= link_to '[X]', [review.book, review], method: :delete,
+            data: { confirm: 'Are you sute?'}%>
+        </p>
+        <p><strong>  <%= review.comments %> </strong>
+       </p>
+    </div>
+<% end %>

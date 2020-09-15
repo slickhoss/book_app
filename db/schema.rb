@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_002541) do
+ActiveRecord::Schema.define(version: 2020_09_15_052637) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
     t.string "publisher"
+    t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.float "score"
+    t.text "comments"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_reviews_on_book_id"
   end
 
 end

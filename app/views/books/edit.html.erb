@@ -1,6 +1,6 @@
-<h1> Add Book </h1>
+<h1> Edit Book </h1>
 
-<%= form_for :book, url: '/books' do |b| %>
+<%= form_for :book, url: book_path(@book), method: :patch do |b| %>
     <% if @book.errors.any? %>
         <% @book.errors.full_messages.each do |msg| %>
             <div class='alert alert-danger'> <%= msg %> </div>

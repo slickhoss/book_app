@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'about' => 'pages#about', as: 'about'
 
-  resources :books
+  resources :books do
+    resources :reviews
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
