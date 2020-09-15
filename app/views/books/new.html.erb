@@ -1,0 +1,23 @@
+<h1> Add Book </h1>
+
+<%= form_for :book, url: '/books' do |b| %>
+    <p>
+         <%= b.label :title %> <br>
+         <%= b.text_field :title %>
+    </p>
+
+    <p>
+        <%= b.label :author %> <br>
+        <%= b.text_field :author%>
+    </p>
+
+
+    <p>
+        <%= b.label :publisher %> <br>
+        <%= b.text_field :publisher%>
+    </p>
+
+    <p> 
+        <%= b.submit %>
+    </p>
+<% end %>
