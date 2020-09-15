@@ -1,7 +1,9 @@
 <h1>Books View</h1>
 
 <% @books.each do |book|%>
-    <h3> Title: <%= book.title %> </h3>
-    <p> Author: <%= book.author %></p>
-    <p> Published by: <%= book.publisher %> </p>
+    <div class="container bg-info">
+        <h3> Title: <%= book.title %> </h3>
+        <p> Author: <%= book.author %></p>
+        <p> Published by: <%= book.publisher %> </p>
+    </div> <br>
 <% end %>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'books#index' 
+  root 'books#index', as: 'home'
 
-  get 'about' => 'pages#about'
+  get 'about' => 'pages#about', as: 'about'
 
   resources :books
 
